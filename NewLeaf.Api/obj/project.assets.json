@@ -5476,44 +5476,38 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dfernandez\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\dfern\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dfernandez\\Source\\Repos\\NewLeafSellPrices\\NewLeaf.Api\\NewLeaf.Api.csproj",
+      "projectUniqueName": "D:\\Repositories\\NewLeafSellPrices\\NewLeaf.Api\\NewLeaf.Api.csproj",
       "projectName": "NewLeaf.Api",
-      "projectPath": "C:\\Users\\dfernandez\\Source\\Repos\\NewLeafSellPrices\\NewLeaf.Api\\NewLeaf.Api.csproj",
-      "packagesPath": "C:\\Users\\dfernandez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dfernandez\\Source\\Repos\\NewLeafSellPrices\\NewLeaf.Api\\obj\\",
+      "projectPath": "D:\\Repositories\\NewLeafSellPrices\\NewLeaf.Api\\NewLeaf.Api.csproj",
+      "packagesPath": "C:\\Users\\dfern\\.nuget\\packages\\",
+      "outputPath": "D:\\Repositories\\NewLeafSellPrices\\NewLeaf.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\dfernandez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dfern\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "\\\\C02FS01.freshbeginnings.corp\\Development\\SharedNuGetFeed\\Release": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://elead1one.pkgs.visualstudio.com/_packaging/elead-nuget/nuget/v3/index.json": {},
-        "https://pkgs.dev.azure.com/elead1one/_packaging/17405f4c-c091-72a0-a6ce-766c72761d79/nuget/v3/index.json": {},
-        "https://pkgs.dev.azure.com/elead1one/_packaging/elead-nuget/nuget/v3/index.json": {},
-        "https://tfs.eleadcrm.com/tfs/DefaultCollection/_packaging/SAAS/nuget/v3/index.json": {},
-        "https://tfs.eleadcrm.com/tfs/DefaultCollection/_packaging/SIP/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\dfernandez\\Source\\Repos\\NewLeafSellPrices\\NewLeaf.Services\\NewLeaf.Services.csproj": {
-              "projectPath": "C:\\Users\\dfernandez\\Source\\Repos\\NewLeafSellPrices\\NewLeaf.Services\\NewLeaf.Services.csproj"
+            "D:\\Repositories\\NewLeafSellPrices\\NewLeaf.Services\\NewLeaf.Services.csproj": {
+              "projectPath": "D:\\Repositories\\NewLeafSellPrices\\NewLeaf.Services\\NewLeaf.Services.csproj"
             }
           }
         }
