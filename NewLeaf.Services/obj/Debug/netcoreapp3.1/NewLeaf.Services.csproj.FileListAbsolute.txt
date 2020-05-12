@@ -1,0 +1,8 @@
+D:\Repositories\NewLeafSellPrices\NewLeaf.Services\bin\Debug\netcoreapp3.1\NewLeaf.Services.deps.json
+D:\Repositories\NewLeafSellPrices\NewLeaf.Services\bin\Debug\netcoreapp3.1\NewLeaf.Services.dll
+D:\Repositories\NewLeafSellPrices\NewLeaf.Services\bin\Debug\netcoreapp3.1\NewLeaf.Services.pdb
+D:\Repositories\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.csproj.CoreCompileInputs.cache
+D:\Repositories\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.AssemblyInfoInputs.cache
+D:\Repositories\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.AssemblyInfo.cs
+D:\Repositories\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.dll
+D:\Repositories\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.pdb

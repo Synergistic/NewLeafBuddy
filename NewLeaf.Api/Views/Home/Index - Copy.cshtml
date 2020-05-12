@@ -1,0 +1,49 @@
+﻿@model List<NewLeaf.Services.Models.Entities.AnimalCrossingItemEntity>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">ACNL Prices</h1>
+        <p>Add your Animal Crossing: New Leaf sell prices below (Re-Tail)</p>
+        <form asp-controller="Home" asp-action="Add">
+            <p>
+                Name: <input type="text" name="itemName">
+                <br/>
+                Bells: <input type="text" name="price">
+                <br/>
+                <input type="submit" value="Add" />
+            </p>
+        </form>
+        <center>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                @*<td>
+                    <form asp-controller="Home" asp-action="Delete">
+                        <input type="text" name="itemName" value="@item.Name" style="visibility: hidden;">
+                        <input type="submit" value="Delete" />
+                    </form>
+                </td>*@
+            </tr>
+                }
+            </table>
+        </center>
+
+
+
+    </div>
