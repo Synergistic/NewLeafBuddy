@@ -6,3 +6,12 @@ D:\Repositories\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLe
 D:\Repositories\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.AssemblyInfo.cs
 D:\Repositories\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.dll
 D:\Repositories\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.pdb
+C:\Users\dfernandez\Source\Repos\NewLeafSellPrices\NewLeaf.Services\bin\Debug\netcoreapp3.1\NewLeaf.Services.deps.json
+C:\Users\dfernandez\Source\Repos\NewLeafSellPrices\NewLeaf.Services\bin\Debug\netcoreapp3.1\NewLeaf.Services.dll
+C:\Users\dfernandez\Source\Repos\NewLeafSellPrices\NewLeaf.Services\bin\Debug\netcoreapp3.1\NewLeaf.Services.pdb
+C:\Users\dfernandez\Source\Repos\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.csprojAssemblyReference.cache
+C:\Users\dfernandez\Source\Repos\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.csproj.CoreCompileInputs.cache
+C:\Users\dfernandez\Source\Repos\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.AssemblyInfoInputs.cache
+C:\Users\dfernandez\Source\Repos\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.AssemblyInfo.cs
+C:\Users\dfernandez\Source\Repos\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.dll
+C:\Users\dfernandez\Source\Repos\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.pdb

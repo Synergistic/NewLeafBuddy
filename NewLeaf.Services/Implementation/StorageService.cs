@@ -11,10 +11,11 @@ namespace NewLeaf.Services.Implementation
 {
     public class StorageService :IStorageService
     {
-        private CloudTable AuthTable(string tableName)
+        private const string TableName = "Items";
+        private CloudTable AuthTable()
         {
-            string accountName = "btcnotistorage";
-            string accountKey = "7cSbmcyVEcdYPqaw5kGc24AGQxiNNqDxwE8cgacA89GDoHYJ2p0K1Ql9/EqzRoXLLiile4ajngF+tXX6LIrFAw==";
+            string accountName = "acnlapistorage";
+            string accountKey = "Zzk/IAagFg98xoJtAEFNVPo7Al9sejrtPemuPPqlEmC24Kr+REJgsP8PLXRv2UHFVTOmnPysAuORCngBOSDg8w==";
             try
             {
                 StorageCredentials creds = new StorageCredentials(accountName, accountKey);
@@ -22,7 +23,7 @@ namespace NewLeaf.Services.Implementation
 
                 CloudTableClient client = account.CreateCloudTableClient();
 
-                CloudTable table = client.GetTableReference(tableName);
+                CloudTable table = client.GetTableReference(TableName);
 
                 return table;
             }
@@ -34,7 +35,7 @@ namespace NewLeaf.Services.Implementation
 
         public async Task AddOrUpdate(AnimalCrossingItemEntity newEntity)
         {
-            var table = AuthTable("AnimalCrossingItemPrices");
+            var table = AuthTable();
             TableOperation operation = TableOperation.InsertOrMerge(newEntity);
             await table.ExecuteAsync(operation);
         }
@@ -43,7 +44,7 @@ namespace NewLeaf.Services.Implementation
         public async Task<AnimalCrossingItemEntity> GetItemByName(string itemName)
         {
             itemName = itemName.ToLowerInvariant();
-            var table = AuthTable("AnimalCrossingItemPrices");
+            var table = AuthTable();
             TableOperation entity = TableOperation.Retrieve<AnimalCrossingItemEntity>("AnimalCrossingItemPrices", itemName);
             var result = await table.ExecuteAsync(entity);
             if(result?.Result != null)
@@ -56,7 +57,7 @@ namespace NewLeaf.Services.Implementation
         public async Task<List<AnimalCrossingItemEntity>> GetAllItems()
         {
 
-            var table = AuthTable("AnimalCrossingItemPrices");
+            var table = AuthTable();
             var entities = await table.ExecuteQuerySegmentedAsync(new TableQuery<AnimalCrossingItemEntity>(), null);
             return entities.ToList();
         }
@@ -64,7 +65,7 @@ namespace NewLeaf.Services.Implementation
         public async Task DeleteItem(string itemName)
         {
 
-            var table = AuthTable("AnimalCrossingItemPrices");
+            var table = AuthTable();
 
             var entity = new AnimalCrossingItemEntity
             {
