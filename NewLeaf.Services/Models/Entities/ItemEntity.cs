@@ -2,7 +2,7 @@
 
 namespace NewLeaf.Services.Models.Entities
 {
-    public class AnimalCrossingItemEntity: TableEntity
+    public class ItemEntity: TableEntity
     {
         public string Name { get; set; }
         public int Price { get; set; }

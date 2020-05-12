@@ -23,7 +23,7 @@ namespace AnimalCrossingPrices
         {
             services.AddControllers();
             services.AddCors();
-            services.RegisterAssemblyPublicNonGenericClasses(typeof(IAnimalCrossingStorageService).Assembly)
+            services.RegisterAssemblyPublicNonGenericClasses(typeof(IItemsService).Assembly)
                 .Where(x => x.Name.EndsWith("Service"))
                 .AsPublicImplementedInterfaces();
         }

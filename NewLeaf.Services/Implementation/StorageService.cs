@@ -6,13 +6,13 @@ using Microsoft.WindowsAzure.Storage.Table;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace NewLeaf.Services.Implementation
 {
     public class StorageService :IStorageService
     {
-        private const string TableName = "Items";
-        private CloudTable AuthTable()
+        private CloudTable AuthTable(string tableName = "Items")
         {
             string accountName = "acnlapistorage";
             string accountKey = "Zzk/IAagFg98xoJtAEFNVPo7Al9sejrtPemuPPqlEmC24Kr+REJgsP8PLXRv2UHFVTOmnPysAuORCngBOSDg8w==";
@@ -23,7 +23,7 @@ namespace NewLeaf.Services.Implementation
 
                 CloudTableClient client = account.CreateCloudTableClient();
 
-                CloudTable table = client.GetTableReference(TableName);
+                CloudTable table = client.GetTableReference(tableName);
 
                 return table;
             }
@@ -33,43 +33,41 @@ namespace NewLeaf.Services.Implementation
             }
         }
 
-        public async Task AddOrUpdate(AnimalCrossingItemEntity newEntity)
+        public async Task AddOrUpdate(string tableName, ITableEntity newEntity)
         {
-            var table = AuthTable();
+            var table = AuthTable(tableName);
             TableOperation operation = TableOperation.InsertOrMerge(newEntity);
             await table.ExecuteAsync(operation);
         }
 
-
-        public async Task<AnimalCrossingItemEntity> GetItemByName(string itemName)
+        public async Task<T> GetByName<T>(string tableName, string itemName, string partitionKey)
         {
             itemName = itemName.ToLowerInvariant();
-            var table = AuthTable();
-            TableOperation entity = TableOperation.Retrieve<AnimalCrossingItemEntity>("AnimalCrossingItemPrices", itemName);
+            var table = AuthTable(tableName);
+            TableOperation entity = TableOperation.Retrieve<ITableEntity>(partitionKey, itemName);
             var result = await table.ExecuteAsync(entity);
             if(result?.Result != null)
             {
-                return ((AnimalCrossingItemEntity)result.Result);
+                return ((T)result.Result);
             }
-            return null;
+            return default(T);
         }
 
-        public async Task<List<AnimalCrossingItemEntity>> GetAllItems()
+        public async Task<List<ItemEntity>> GetAllItems()
         {
 
             var table = AuthTable();
-            var entities = await table.ExecuteQuerySegmentedAsync(new TableQuery<AnimalCrossingItemEntity>(), null);
+            var entities = await table.ExecuteQuerySegmentedAsync(new TableQuery<ItemEntity>(), null);
             return entities.ToList();
         }
 
-        public async Task DeleteItem(string itemName)
+        public async Task DeleteByName(string tableName, string itemName, string partitionKey)
         {
 
-            var table = AuthTable();
-
-            var entity = new AnimalCrossingItemEntity
+            var table = AuthTable(tableName);
+            var entity = new ItemEntity
             {
-                PartitionKey = "AnimalCrossItemPrices",
+                PartitionKey = partitionKey,
                 RowKey = itemName,
                 ETag = "*"
             };

@@ -1,4 +1,5 @@
-﻿using NewLeaf.Services.Models.Entities;
+﻿using Microsoft.WindowsAzure.Storage.Table;
+using NewLeaf.Services.Models.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -6,9 +7,9 @@ namespace NewLeaf.Services.Interface
 {
     public interface IStorageService
     {
-        Task AddOrUpdate(AnimalCrossingItemEntity newEntity);
-        Task<AnimalCrossingItemEntity> GetItemByName(string itemName);
-        Task<List<AnimalCrossingItemEntity>> GetAllItems();
-        Task DeleteItem(string itemName);
+        Task AddOrUpdate(string tableName, ITableEntity newEntity);
+        Task<T> GetByName<T>(string tableName, string itemName, string partitionKey);
+        Task<List<ItemEntity>> GetAllItems();
+        Task DeleteByName(string tableName, string itemName, string partitionKey);
     }
 }

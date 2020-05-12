@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace NewLeaf.Services.Implementation
 {
-    public class AnimalCrossingStorageService : IAnimalCrossingStorageService
+    public class ItemsService : IItemsService
     {
-        public AnimalCrossingStorageService(IStorageService storageService)
+        public ItemsService(IStorageService storageService)
         {
             this.StorageService = storageService;
         }
@@ -23,7 +23,8 @@ namespace NewLeaf.Services.Implementation
             }
 
             await StorageService.AddOrUpdate(
-            new AnimalCrossingItemEntity()
+                "Items",
+            new ItemEntity()
             {
                 Price = price,
                 Name = itemName,
@@ -33,19 +34,19 @@ namespace NewLeaf.Services.Implementation
             });
         }
 
-        public async Task<List<AnimalCrossingItemEntity>> GetAllItems()
+        public async Task<List<ItemEntity>> GetAllItems()
         {
             return await StorageService.GetAllItems();
         }
 
         public async Task RemoveItemByName(string itemName)
         {
-            await StorageService.DeleteItem(itemName);
+            await StorageService.DeleteByName("Items", itemName, "AnimalCrossingItemPrices");
         }
 
-        private async Task<bool> ItemExists(string item)
+        private async Task<bool> ItemExists(string itemName)
         {
-            var itemEntity = await StorageService.GetItemByName(item);
+            var itemEntity = await StorageService.GetByName<ItemEntity>("Items", itemName, "AnimalCrossingItemPrices");
             return itemEntity != null;
         }
 

@@ -1,8 +1,6 @@
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.csprojAssemblyReference.cache
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.csproj.CoreCompileInputs.cache
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.MvcApplicationPartsAssemblyInfo.cache
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.RazorAssemblyInfo.cache
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.RazorAssemblyInfo.cs
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.AssemblyInfoInputs.cache
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.AssemblyInfo.cs
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -17,7 +15,6 @@ D:\Repositories\NewLeafSellPrices\NewLeaf.Api\bin\Debug\netcoreapp3.1\NewLeaf.Ap
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\bin\Debug\netcoreapp3.1\NewLeaf.Api.dll
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\bin\Debug\netcoreapp3.1\NewLeaf.Api.pdb
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\bin\Debug\netcoreapp3.1\NewLeaf.Api.Views.dll
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\bin\Debug\netcoreapp3.1\NewLeaf.Api.Views.pdb
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
@@ -28,19 +25,7 @@ D:\Repositories\NewLeafSellPrices\NewLeaf.Api\bin\Debug\netcoreapp3.1\Twilio.dll
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\bin\Debug\netcoreapp3.1\Microsoft.WindowsAzure.Storage.dll
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\bin\Debug\netcoreapp3.1\NewLeaf.Services.dll
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\bin\Debug\netcoreapp3.1\NewLeaf.Services.pdb
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.TagHelpers.input.cache
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.TagHelpers.output.cache
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.RazorCoreGenerate.cache
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index - Copy.cshtml.g.cs
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.RazorTargetAssemblyInfo.cache
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.RazorTargetAssemblyInfo.cs
-D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.Views.pdb
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\NewLeaf.Api.csproj.CopyComplete
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\staticwebassets\NewLeaf.Api.StaticWebAssets.Manifest.cache
 D:\Repositories\NewLeafSellPrices\NewLeaf.Api\obj\Debug\netcoreapp3.1\staticwebassets\NewLeaf.Api.StaticWebAssets.xml

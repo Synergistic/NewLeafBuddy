@@ -18,7 +18,7 @@ namespace NewLeaf.Tests
         {
             var oldTable = AuthTable("AnimalCrossingItemPrices", true);
 
-            var allExistingItems = await oldTable.ExecuteQuerySegmentedAsync(new TableQuery<AnimalCrossingItemEntity>(), null);
+            var allExistingItems = await oldTable.ExecuteQuerySegmentedAsync(new TableQuery<ItemEntity>(), null);
 
             var newTable = AuthTable("Items", false);
 

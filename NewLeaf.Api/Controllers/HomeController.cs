@@ -13,16 +13,16 @@ namespace AnimalCrossingPrices.Controllers
     public class ItemPricesController : Controller
     { 
     
-        private readonly IAnimalCrossingStorageService AnimalCrossingStorageService;
+        private readonly IItemsService AnimalCrossingStorageService;
 
 
-        public ItemPricesController(IAnimalCrossingStorageService animalCrossingStorageService)
+        public ItemPricesController(IItemsService animalCrossingStorageService)
         {
             this.AnimalCrossingStorageService = animalCrossingStorageService;
         }
 
         [HttpGet("GetAllItems")]
-        public async Task<List<AnimalCrossingItemEntity>> GetAllItems()
+        public async Task<List<ItemEntity>> GetAllItems()
         {
             return await AnimalCrossingStorageService.GetAllItems();
         }

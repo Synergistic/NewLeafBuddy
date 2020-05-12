@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 
 namespace NewLeaf.Services.Interface
 {
-    public interface IAnimalCrossingStorageService
+    public interface IItemsService
     {
-        Task<List<AnimalCrossingItemEntity>> GetAllItems();
+        Task<List<ItemEntity>> GetAllItems();
         Task AddPriceForItem(string itemName, int price);
         Task RemoveItemByName(string itemName);
     }
