@@ -7,7 +7,7 @@ namespace NewLeaf.Services.Interface
     public interface IItemsService
     {
         Task<List<ItemEntity>> GetAllItems();
-        Task AddPriceForItem(string itemName, int price);
+        Task<ItemEntity> AddPriceForItem(string itemName, int price);
         Task RemoveItemByName(string itemName);
     }
 }

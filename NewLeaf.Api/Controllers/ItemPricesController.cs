@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NewLeaf.Services.Interface;
 using NewLeaf.Services.Models.Entities;
@@ -12,27 +11,25 @@ namespace AnimalCrossingPrices.Controllers
     [ApiController]
     public class ItemPricesController : Controller
     { 
-    
-        private readonly IItemsService AnimalCrossingStorageService;
-
+        private readonly IItemsService ItemService;
 
         public ItemPricesController(IItemsService animalCrossingStorageService)
         {
-            this.AnimalCrossingStorageService = animalCrossingStorageService;
+            this.ItemService = animalCrossingStorageService;
         }
 
-        [HttpGet("GetAllItems")]
+        [HttpGet("Get")]
         public async Task<List<ItemEntity>> GetAllItems()
         {
-            return await AnimalCrossingStorageService.GetAllItems();
+            return await ItemService.GetAllItems();
         }
 
         [HttpGet("Add")]
         public async Task<bool> Add(string itemName, string price)
         {
-            if (Int32.TryParse(price, out int priceValue))
+            if (int.TryParse(price, out int priceValue))
             {
-                await AnimalCrossingStorageService.AddPriceForItem(itemName, priceValue);
+                await ItemService.AddPriceForItem(itemName, priceValue);
                 return true;
             }
             return false;
@@ -41,7 +38,7 @@ namespace AnimalCrossingPrices.Controllers
         [HttpGet("Delete")]
         public async Task Delete(string itemName)
         {
-            await AnimalCrossingStorageService.RemoveItemByName(itemName);
+            await ItemService.RemoveItemByName(itemName);
         }
 
     }

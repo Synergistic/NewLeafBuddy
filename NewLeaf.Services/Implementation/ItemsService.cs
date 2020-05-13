@@ -13,24 +13,24 @@ namespace NewLeaf.Services.Implementation
         }
 
         protected IStorageService StorageService { get; }
-        public async Task AddPriceForItem(string itemName, int price)
+        public async Task<ItemEntity> AddPriceForItem(string itemName, int price)
         {
             var strippedItemName = itemName.StripWhitespace();
-            if (await this.ItemExists(strippedItemName))
+            var existingItem = await this.ItemExists(strippedItemName);
+            if(existingItem != null)
             {
-                return;
+                return existingItem;
             }
-
-            await StorageService.AddOrUpdate(
-                "Items",
-            new ItemEntity()
+            var newItem = new ItemEntity()
             {
                 Price = price,
                 Name = itemName,
                 Id = 0,
                 RowKey = strippedItemName,
                 PartitionKey = strippedItemName
-            });
+            };
+            await StorageService.AddOrUpdate("Items", newItem);
+            return newItem;
         }
 
         public async Task<List<ItemEntity>> GetAllItems()
@@ -44,12 +44,9 @@ namespace NewLeaf.Services.Implementation
             await StorageService.DeleteByName("Items", strippedItemName, strippedItemName);
         }
 
-        private async Task<bool> ItemExists(string itemName)
+        private async Task<ItemEntity?> ItemExists(string itemName)
         {
-            var itemEntity = await StorageService.GetByName<ItemEntity>("Items", itemName, itemName);
-            return itemEntity != null;
+            return await StorageService.GetByName<ItemEntity>("Items", itemName, itemName);            
         }
-
-
     }
 }

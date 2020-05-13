@@ -10,7 +10,7 @@ namespace NewLeaf.Services.Interface
         Task AddOrUpdate(string tableName, ITableEntity newEntity);
         Task<T> GetByName<T>(string tableName, string itemName, string partitionKey);
         Task<List<ItemEntity>> GetAllItems();
-        Task<List<TownEntity>> GetAllTowns();
+        Task<List<TownEntity>> GetMyTowns(string userName);
         Task DeleteByName(string tableName, string itemName, string partitionKey);
     }
 }

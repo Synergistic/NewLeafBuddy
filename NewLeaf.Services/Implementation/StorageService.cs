@@ -60,10 +60,15 @@ namespace NewLeaf.Services.Implementation
         }
 
 
-        public async Task<List<TownEntity>> GetAllTowns()
+        public async Task<List<TownEntity>> GetMyTowns(string userName)
         {
             var table = AuthTable("Towns");
-            var entities = await table.ExecuteQuerySegmentedAsync(new TableQuery<TownEntity>(), null);
+            var tableQuery = new TableQuery<TownEntity>().Where(TableQuery.GenerateFilterCondition(
+                "PartitionKey",
+                QueryComparisons.GreaterThanOrEqual,
+                userName
+              ));
+            var entities = await table.ExecuteQuerySegmentedAsync(tableQuery, null);
             return entities.ToList();
         }
 
