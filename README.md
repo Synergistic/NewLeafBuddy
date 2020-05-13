@@ -1,4 +1,4 @@
-# NewLeafSellPrices
+# NewLeafBuddy
  
 .NET Core API and React front end for Animal Crossing New Leaf item prices and town management.
 
