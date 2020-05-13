@@ -11,6 +11,6 @@ namespace NewLeaf.Services.Models.Entities
         public string MayorName { get; set; }
         public DateTime Created { get; set; }
         public int NativeFruit { get; set; }
-        public List<Tuple<int, int>> TurnipPrices { get; set; }
+        public string TurnipPrices { get; set; }
     }
 }
