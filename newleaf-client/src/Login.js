@@ -1,9 +1,13 @@
 import { GoogleLogin } from 'react-google-login';
-import React from 'react'
+import React, { useEffect } from 'react';
 
 const Login = props => {
     const { performLogin } = props;
 
+    useEffect(() => {
+        let userName = localStorage.getItem('userName');
+        if(userName) performLogin(userName);
+    });
 
     const responseGoogle = (response) => {
         console.log(response);
@@ -13,6 +17,8 @@ const Login = props => {
         let email = response.profileObj.email;
         let userName = email.replace('@', '');
         performLogin(userName)
+        localStorage.clear();
+        localStorage.setItem('userName', userName);
     }
 
     const getClientId = () => {

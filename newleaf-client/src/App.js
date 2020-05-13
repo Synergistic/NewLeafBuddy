@@ -1,6 +1,6 @@
 import React from 'react'
 import ItemsTable from './ItemsTable';
-import MyTown from './MyTown';
+import MyTown from './Town/MyTown';
 import { Container, Image, Tab } from 'semantic-ui-react'
 import './App.css';
 import logo from './logo.PNG';
