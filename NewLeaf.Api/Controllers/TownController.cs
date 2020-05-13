@@ -31,6 +31,13 @@ namespace AnimalCrossingPrices.Controllers
             return await TownService.CreateNewTown(userName, townName, mayorName, createdDate, nativeFruit);
         }
 
+
+        [HttpGet("UpdateTurnips")]
+        public async Task<TownEntity> UpdateTurnips(string userName, string townName, string turnipPrices)
+        {
+            return await TownService.UpdateTurnipPrices(userName, townName, turnipPrices);
+        }
+
         //[HttpGet("Delete")]
         //public async Task Delete()
         //{

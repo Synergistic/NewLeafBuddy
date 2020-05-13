@@ -25,12 +25,21 @@ namespace NewLeaf.Services.Implementation
                 OwnerUsername = userName,
                 Created = createdDate,
                 NativeFruit = nativeFruit,
-                TurnipPrices = new List<Tuple<int, int>>(),
+                TurnipPrices = "0.0.0.0.0.0.0.0.0.0.0.0.0.0",
                 PartitionKey = userName,
                 RowKey = townName
             };
             await StorageService.AddOrUpdate("Towns", newTown);
             return newTown;
+        }
+
+        public async Task<TownEntity> UpdateTurnipPrices(string userName, string townName, string turnipPrices)
+        {
+            var existingTown = await this.TownExists(userName, townName);
+            if (existingTown == null) return null;
+            existingTown.TurnipPrices = turnipPrices;
+            await StorageService.AddOrUpdate("Towns", existingTown);
+            return existingTown;
         }
         public async Task<List<TownEntity>> GetMyTowns(string userName)
         {

@@ -13,7 +13,6 @@ namespace NewLeaf.Tests
     public class Tests
     {
 
-
         [TestMethod]
         public async Task MigrateToNewPartitionKey()
         {
