@@ -1,8 +1,6 @@
 ﻿using NewLeaf.Services.Interface;
 using NewLeaf.Services.Models.Entities;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace NewLeaf.Services.Implementation
@@ -17,7 +15,8 @@ namespace NewLeaf.Services.Implementation
         protected IStorageService StorageService { get; }
         public async Task AddPriceForItem(string itemName, int price)
         {
-            if (await this.ItemExists(itemName))
+            var strippedItemName = itemName.StripWhitespace();
+            if (await this.ItemExists(strippedItemName))
             {
                 return;
             }
@@ -29,8 +28,8 @@ namespace NewLeaf.Services.Implementation
                 Price = price,
                 Name = itemName,
                 Id = 0,
-                RowKey = itemName,
-                PartitionKey = "AnimalCrossItemPrices"
+                RowKey = strippedItemName,
+                PartitionKey = strippedItemName
             });
         }
 
@@ -41,12 +40,13 @@ namespace NewLeaf.Services.Implementation
 
         public async Task RemoveItemByName(string itemName)
         {
-            await StorageService.DeleteByName("Items", itemName, "AnimalCrossingItemPrices");
+            var strippedItemName = itemName.StripWhitespace();
+            await StorageService.DeleteByName("Items", strippedItemName, strippedItemName);
         }
 
         private async Task<bool> ItemExists(string itemName)
         {
-            var itemEntity = await StorageService.GetByName<ItemEntity>("Items", itemName, "AnimalCrossingItemPrices");
+            var itemEntity = await StorageService.GetByName<ItemEntity>("Items", itemName, itemName);
             return itemEntity != null;
         }
 

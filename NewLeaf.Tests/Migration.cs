@@ -5,6 +5,7 @@ using Microsoft.WindowsAzure.Storage.Table;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NewLeaf.Services;
 
 namespace NewLeaf.Tests
 {
@@ -14,31 +15,28 @@ namespace NewLeaf.Tests
 
 
         [TestMethod]
-        public async Task MigrateToNewAzureAsync()
+        public async Task MigrateToNewPartitionKey()
         {
-            var oldTable = AuthTable("AnimalCrossingItemPrices", true);
+            var oldTable = AuthTable("ItemsTemp");
 
             var allExistingItems = await oldTable.ExecuteQuerySegmentedAsync(new TableQuery<ItemEntity>(), null);
 
-            var newTable = AuthTable("Items", false);
+            var newTable = AuthTable("Items");
 
             foreach (var entity in allExistingItems.ToList())
             {
+                entity.PartitionKey = entity.Name.StripWhitespace();
+                entity.RowKey = entity.Name.StripWhitespace();
                 TableOperation operation = TableOperation.InsertOrMerge(entity);
                 await newTable.ExecuteAsync(operation);
             }
 
         }
 
-        private CloudTable AuthTable(string tableName, bool useOld)
+        private CloudTable AuthTable(string tableName)
         {
-            string accountName = "btcnotistorage";
-            string accountKey = "7cSbmcyVEcdYPqaw5kGc24AGQxiNNqDxwE8cgacA89GDoHYJ2p0K1Ql9/EqzRoXLLiile4ajngF+tXX6LIrFAw==";
-            if (!useOld)
-            {
-                accountName = "acnlapistorage";
-                accountKey = "Zzk/IAagFg98xoJtAEFNVPo7Al9sejrtPemuPPqlEmC24Kr+REJgsP8PLXRv2UHFVTOmnPysAuORCngBOSDg8w==";
-            }
+            string accountName = "acnlapistorage";
+            string accountKey = "Zzk/IAagFg98xoJtAEFNVPo7Al9sejrtPemuPPqlEmC24Kr+REJgsP8PLXRv2UHFVTOmnPysAuORCngBOSDg8w==";
             try
             {
                 StorageCredentials creds = new StorageCredentials(accountName, accountKey);

@@ -6,7 +6,6 @@ using Microsoft.WindowsAzure.Storage.Table;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace NewLeaf.Services.Implementation
 {
@@ -55,9 +54,16 @@ namespace NewLeaf.Services.Implementation
 
         public async Task<List<ItemEntity>> GetAllItems()
         {
-
-            var table = AuthTable();
+            var table = AuthTable("Items");
             var entities = await table.ExecuteQuerySegmentedAsync(new TableQuery<ItemEntity>(), null);
+            return entities.ToList();
+        }
+
+
+        public async Task<List<TownEntity>> GetAllTowns()
+        {
+            var table = AuthTable("Towns");
+            var entities = await table.ExecuteQuerySegmentedAsync(new TableQuery<TownEntity>(), null);
             return entities.ToList();
         }
 
