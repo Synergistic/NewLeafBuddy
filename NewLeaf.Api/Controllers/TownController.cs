@@ -33,9 +33,9 @@ namespace AnimalCrossingPrices.Controllers
 
 
         [HttpGet("UpdateTurnips")]
-        public async Task<TownEntity> UpdateTurnips(string userName, string townName, string turnipPrices)
+        public async Task<TownEntity> UpdateTurnips(string userName, string townName, string turnipPrices, int quantity = 0)
         {
-            return await TownService.UpdateTurnipPrices(userName, townName, turnipPrices);
+            return await TownService.UpdateTurnips(userName, townName, turnipPrices, quantity);
         }
 
         //[HttpGet("Delete")]

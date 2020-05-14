@@ -12,5 +12,6 @@ namespace NewLeaf.Services.Models.Entities
         public DateTime Created { get; set; }
         public int NativeFruit { get; set; }
         public string TurnipPrices { get; set; }
+        public int TurnipsOwned { get; set; }
     }
 }

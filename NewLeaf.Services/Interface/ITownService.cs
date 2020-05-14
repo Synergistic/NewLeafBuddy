@@ -9,6 +9,6 @@ namespace NewLeaf.Services.Interface
     {
         Task<List<TownEntity>> GetMyTowns(string userName);
         Task<TownEntity> CreateNewTown(string userName, string townName, string mayorName, DateTime createdDate, int nativeFruit);
-        Task<TownEntity> UpdateTurnipPrices(string userName, string townName, string turnipPrices);
+        Task<TownEntity> UpdateTurnips(string userName, string townName, string turnipPrices, int quantity);
     }
 }

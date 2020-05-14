@@ -26,6 +26,7 @@ namespace NewLeaf.Services.Implementation
                 Created = createdDate,
                 NativeFruit = nativeFruit,
                 TurnipPrices = "0.0.0.0.0.0.0.0.0.0.0.0.0.0",
+                TurnipsOwned = 0,
                 PartitionKey = userName.ToLowerInvariant(),
                 RowKey = townName.ToLowerInvariant()
             };
@@ -33,11 +34,12 @@ namespace NewLeaf.Services.Implementation
             return newTown;
         }
 
-        public async Task<TownEntity> UpdateTurnipPrices(string userName, string townName, string turnipPrices)
+        public async Task<TownEntity> UpdateTurnips(string userName, string townName, string turnipPrices, int quantity)
         {
             var existingTown = await this.TownExists(userName, townName);
             if (existingTown == null) return null;
             existingTown.TurnipPrices = turnipPrices;
+            existingTown.TurnipsOwned = quantity;
             await StorageService.AddOrUpdate("Towns", existingTown);
             return existingTown;
         }
