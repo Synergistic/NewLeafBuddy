@@ -15,3 +15,4 @@ C:\Users\dfernandez\Source\Repos\NewLeafSellPrices\NewLeaf.Services\obj\Debug\ne
 C:\Users\dfernandez\Source\Repos\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.dll
 C:\Users\dfernandez\Source\Repos\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.pdb
 C:\Users\dfernandez\Source\Repos\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.csprojAssemblyReference.cache
+D:\Repositories\NewLeafSellPrices\NewLeaf.Services\obj\Debug\netcoreapp3.1\NewLeaf.Services.csprojAssemblyReference.cache

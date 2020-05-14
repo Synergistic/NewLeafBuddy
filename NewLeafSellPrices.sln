@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewLeaf.Services", "NewLeaf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewLeaf.Api", "NewLeaf.Api\NewLeaf.Api.csproj", "{4F18F3C2-407D-4BCC-8164-658F75B754D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewLeaf.Tests", "NewLeaf.Tests\NewLeaf.Tests.csproj", "{1C9E75CB-05D2-4FB7-9B79-7E07C801D5A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewLeaf.Tests", "NewLeaf.Tests\NewLeaf.Tests.csproj", "{1C9E75CB-05D2-4FB7-9B79-7E07C801D5A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewLeaf.ResetTurnips", "NewLeaf.ResetTurnips\NewLeaf.ResetTurnips.csproj", "{2B2E65F5-0C48-4AB9-BA10-29FA73E78741}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{1C9E75CB-05D2-4FB7-9B79-7E07C801D5A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C9E75CB-05D2-4FB7-9B79-7E07C801D5A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C9E75CB-05D2-4FB7-9B79-7E07C801D5A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B2E65F5-0C48-4AB9-BA10-29FA73E78741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B2E65F5-0C48-4AB9-BA10-29FA73E78741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B2E65F5-0C48-4AB9-BA10-29FA73E78741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B2E65F5-0C48-4AB9-BA10-29FA73E78741}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -30,6 +30,7 @@ const MyTown = props => {
                     <li>Mayor {towns[0].mayorName}</li>
                     <li>Created {towns[0].created}</li>
                     <li>Fruit {fruits[towns[0].nativeFruit]}</li>
+                    <li>Turnips Owned: {towns[0].turnipsOwned}</li>
                 </ul>
                 <TurnipPrices town={towns[0]} />
                 </React.Fragment>

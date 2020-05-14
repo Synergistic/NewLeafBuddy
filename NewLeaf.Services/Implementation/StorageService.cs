@@ -63,7 +63,12 @@ namespace NewLeaf.Services.Implementation
             var entities = await table.ExecuteQuerySegmentedAsync(new TableQuery<ItemEntity>(), null);
             return entities.ToList();
         }
-
+        public async Task<List<TownEntity>> GetAllTowns()
+        {
+            var table = AuthTable("Towns");
+            var entities = await table.ExecuteQuerySegmentedAsync(new TableQuery<TownEntity>(), null);
+            return entities.ToList();
+        }
 
         public async Task<List<TownEntity>> GetMyTowns(string userName)
         {

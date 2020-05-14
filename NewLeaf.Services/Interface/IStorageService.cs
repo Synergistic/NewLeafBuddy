@@ -11,6 +11,7 @@ namespace NewLeaf.Services.Interface
         Task<TownEntity> GetTownByName(string tableName, string itemName, string partitionKey);
         Task<ItemEntity> GetItemByName(string tableName, string itemName, string partitionKey);
         Task<List<ItemEntity>> GetAllItems();
+        Task<List<TownEntity>> GetAllTowns();
         Task<List<TownEntity>> GetMyTowns(string userName);
         Task DeleteByName(string tableName, string itemName, string partitionKey);
     }

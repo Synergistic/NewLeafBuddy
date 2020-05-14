@@ -14,10 +14,13 @@ namespace NewLeaf.Services.Implementation
         }
         protected IStorageService StorageService { get; }
 
-        public async Task<TownEntity> CreateNewTown(string userName, string townName, string mayorName, DateTime createdDate, int nativeFruit)
+        public async Task<TownEntity> UpsertTown(TownEntity updatedTown)
         {
-            var existingTown = await this.TownExists(userName, townName);
-            if (existingTown != null) return existingTown;
+            await StorageService.AddOrUpdate("Towns", updatedTown);
+            return updatedTown;
+        }
+        public async Task<TownEntity> UpsertTown(string userName, string townName, string mayorName, DateTime createdDate, int nativeFruit)
+        {
             var newTown = new TownEntity()
             {
                 Name = townName,
@@ -30,11 +33,10 @@ namespace NewLeaf.Services.Implementation
                 PartitionKey = userName.ToLowerInvariant(),
                 RowKey = townName.ToLowerInvariant()
             };
-            await StorageService.AddOrUpdate("Towns", newTown);
-            return newTown;
+            return await UpsertTown(newTown);
         }
 
-        public async Task<TownEntity> UpdateTurnips(string userName, string townName, string turnipPrices, int quantity)
+        public async Task<TownEntity> UpsertTurnips(string userName, string townName, string turnipPrices, int quantity)
         {
             var existingTown = await this.TownExists(userName, townName);
             if (existingTown == null) return null;
@@ -50,6 +52,11 @@ namespace NewLeaf.Services.Implementation
         private async Task<TownEntity> TownExists(string userName, string townName)
         {
             return await StorageService.GetTownByName("Towns", townName, userName);
+        }
+
+        public async Task<List<TownEntity>> GetAllTowns()
+        {
+            return await this.StorageService.GetAllTowns();
         }
     }
 }

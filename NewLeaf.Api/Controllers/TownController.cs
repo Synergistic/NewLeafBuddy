@@ -28,14 +28,14 @@ namespace AnimalCrossingPrices.Controllers
         [HttpGet("Add")]
         public async Task<TownEntity> Add(string userName, string townName, string mayorName, DateTime createdDate, int nativeFruit)
         {
-            return await TownService.CreateNewTown(userName, townName, mayorName, createdDate, nativeFruit);
+            return await TownService.UpsertTown(userName, townName, mayorName, createdDate, nativeFruit);
         }
 
 
         [HttpGet("UpdateTurnips")]
         public async Task<TownEntity> UpdateTurnips(string userName, string townName, string turnipPrices, int quantity = 0)
         {
-            return await TownService.UpdateTurnips(userName, townName, turnipPrices, quantity);
+            return await TownService.UpsertTurnips(userName, townName, turnipPrices, quantity);
         }
 
         //[HttpGet("Delete")]
