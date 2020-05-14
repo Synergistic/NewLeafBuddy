@@ -8,14 +8,13 @@ Current Features:
 - Sort items by name or price
 - Login via google
 - Add/view town information
+- Add/view turnip prices
 
 Planned Features:
-- Add/view turnip prices
 - turnip selling advice
 - hybrid flower assist
 - town editing
 - friends/friend codes
 - info updates ie turnip prices from friends
-
 
 https://synergistic.github.io/
