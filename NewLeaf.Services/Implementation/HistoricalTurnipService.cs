@@ -16,6 +16,7 @@ namespace NewLeaf.Services.Implementation
 
         public async Task<TurnipEntity> SaveTurnipData(TownEntity town)
         {
+            if (town.TurnipPrices == null || town.TurnipPrices.Length <= 0 || town.TurnipPrices.All(s => s < 20)) return null;
             var turnipRecord = new TurnipEntity()
             {
                 MaxProfit = this.CalculateMaxProfit(town.TurnipPrices, town.TurnipsOwned),
