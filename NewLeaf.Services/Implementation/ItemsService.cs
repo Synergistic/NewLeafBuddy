@@ -46,7 +46,7 @@ namespace NewLeaf.Services.Implementation
 
         private async Task<ItemEntity?> ItemExists(string itemName)
         {
-            return await StorageService.GetByName<ItemEntity>("Items", itemName, itemName);            
+            return await StorageService.GetItemByName("Items", itemName, itemName);            
         }
     }
 }

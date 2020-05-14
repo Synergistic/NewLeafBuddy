@@ -39,17 +39,22 @@ namespace NewLeaf.Services.Implementation
             await table.ExecuteAsync(operation);
         }
 
-        public async Task<T> GetByName<T>(string tableName, string itemName, string partitionKey)
+        public async Task<TownEntity> GetTownByName(string tableName, string itemName, string partitionKey)
         {
             itemName = itemName.ToLowerInvariant();
             var table = AuthTable(tableName);
-            TableOperation entity = TableOperation.Retrieve<ITableEntity>(partitionKey, itemName);
+            TableOperation entity = TableOperation.Retrieve<TownEntity>(partitionKey, itemName);
             var result = await table.ExecuteAsync(entity);
-            if(result?.Result != null)
-            {
-                return ((T)result.Result);
-            }
-            return default(T);
+            return (TownEntity)result.Result;
+        }
+
+        public async Task<ItemEntity> GetItemByName(string tableName, string itemName, string partitionKey)
+        {
+            itemName = itemName.ToLowerInvariant();
+            var table = AuthTable(tableName);
+            TableOperation entity = TableOperation.Retrieve<ItemEntity>(partitionKey, itemName);
+            var result = await table.ExecuteAsync(entity);
+            return (ItemEntity)result.Result;
         }
 
         public async Task<List<ItemEntity>> GetAllItems()

@@ -6,12 +6,36 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NewLeaf.Services;
+using Microsoft.Extensions.DependencyInjection;
+using NewLeaf.Services.Interface;
+using NewLeaf.Services.Implementation;
+using System;
 
 namespace NewLeaf.Tests
 {
     [TestClass]
     public class Tests
     {
+
+        private ServiceProvider serviceProvider { get; set; }
+        public void SetUp()
+        {
+            var services = new ServiceCollection();
+            services.AddSingleton(typeof(ITownService), typeof(TownService));
+            services.AddSingleton(typeof(IStorageService), typeof(StorageService));
+            serviceProvider = services.BuildServiceProvider();
+        }
+
+        [TestMethod]
+        public async Task Thing() {
+            var storageService = new StorageService();
+            var townService = new TownService(storageService);
+
+            var table = AuthTable("Towns");
+
+            await townService.UpdateTurnipPrices("synergy.harmgmail.com", "test", "1.0.0.0.0.0.0.0.0.0.0.0.0.0");
+
+        }
 
         [TestMethod]
         public async Task MigrateToNewPartitionKey()

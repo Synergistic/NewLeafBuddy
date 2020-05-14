@@ -199,10 +199,12 @@ D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\bin\Debug\netcoreapp3.1\zh-Hant\
 D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\bin\Debug\netcoreapp3.1\NewLeaf.Services.dll
 D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\bin\Debug\netcoreapp3.1\NewLeaf.Services.pdb
 D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\obj\Debug\netcoreapp3.1\NewLeaf.Tests.csprojAssemblyReference.cache
-D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\obj\Debug\netcoreapp3.1\NewLeaf.Tests.csproj.CoreCompileInputs.cache
 D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\obj\Debug\netcoreapp3.1\NewLeaf.Tests.AssemblyInfoInputs.cache
 D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\obj\Debug\netcoreapp3.1\NewLeaf.Tests.AssemblyInfo.cs
 D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\obj\Debug\netcoreapp3.1\NewLeaf.Tests.csproj.CopyComplete
 D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\obj\Debug\netcoreapp3.1\NewLeaf.Tests.dll
 D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\obj\Debug\netcoreapp3.1\NewLeaf.Tests.pdb
 D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\obj\Debug\netcoreapp3.1\NewLeaf.Tests.genruntimeconfig.cache
+D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Repositories\NewLeafSellPrices\NewLeaf.Tests\obj\Debug\netcoreapp3.1\NewLeaf.Tests.csproj.CoreCompileInputs.cache

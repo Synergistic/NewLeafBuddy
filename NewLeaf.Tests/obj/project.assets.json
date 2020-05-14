@@ -48,6 +48,27 @@
           "build/netstandard1.0/Microsoft.CodeCoverage.targets": {}
         }
       },
+      "Microsoft.Extensions.DependencyInjection/3.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.4"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
       "Microsoft.IdentityModel.JsonWebTokens/5.3.0": {
         "type": "package",
         "dependencies": {
@@ -1668,6 +1689,40 @@
         "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
         "microsoft.codecoverage.16.5.0.nupkg.sha512",
         "microsoft.codecoverage.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection/3.1.4": {
+      "sha512": "dAWhz6BEjUFIVLUPbT1s1sUrPTwbUWdw2iBRRe3ej3xXcKS+oo64dKrIWFxRjYP6TWyESpGFNY5NGeA5FcHVlg==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/3.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.3.1.4.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.4": {
+      "sha512": "AceHamXNKDMDwIoZqEoApLp8s3935wSC3VXrPaRWa0wWOaEcYdDlo1nWQ1zLiezoDmpJzV7FqDm53E0Ty/hEMg==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.3.1.4.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
       ]
     },
     "Microsoft.IdentityModel.JsonWebTokens/5.3.0": {
@@ -5474,50 +5529,45 @@
       "MSTest.TestAdapter >= 2.1.0",
       "MSTest.TestFramework >= 2.1.0",
       "Microsoft.Azure.Storage.Common >= 11.1.5",
+      "Microsoft.Extensions.DependencyInjection >= 3.1.4",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NewLeaf.Services >= 1.0.0",
       "coverlet.collector >= 1.2.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dfernandez\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\dfern\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dfernandez\\Source\\Repos\\NewLeafSellPrices\\NewLeaf.Tests\\NewLeaf.Tests.csproj",
+      "projectUniqueName": "D:\\Repositories\\NewLeafSellPrices\\NewLeaf.Tests\\NewLeaf.Tests.csproj",
       "projectName": "NewLeaf.Tests",
-      "projectPath": "C:\\Users\\dfernandez\\Source\\Repos\\NewLeafSellPrices\\NewLeaf.Tests\\NewLeaf.Tests.csproj",
-      "packagesPath": "C:\\Users\\dfernandez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dfernandez\\Source\\Repos\\NewLeafSellPrices\\NewLeaf.Tests\\obj\\",
+      "projectPath": "D:\\Repositories\\NewLeafSellPrices\\NewLeaf.Tests\\NewLeaf.Tests.csproj",
+      "packagesPath": "C:\\Users\\dfern\\.nuget\\packages\\",
+      "outputPath": "D:\\Repositories\\NewLeafSellPrices\\NewLeaf.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\dfernandez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dfern\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\NuGet.Config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "\\\\C02FS01.freshbeginnings.corp\\Development\\SharedNuGetFeed\\Release": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://elead1one.pkgs.visualstudio.com/_packaging/elead-nuget/nuget/v3/index.json": {},
-        "https://pkgs.dev.azure.com/elead1one/_packaging/17405f4c-c091-72a0-a6ce-766c72761d79/nuget/v3/index.json": {},
-        "https://pkgs.dev.azure.com/elead1one/_packaging/elead-nuget/nuget/v3/index.json": {},
-        "https://tfs.eleadcrm.com/tfs/DefaultCollection/_packaging/SAAS/nuget/v3/index.json": {},
-        "https://tfs.eleadcrm.com/tfs/DefaultCollection/_packaging/SIP/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\dfernandez\\Source\\Repos\\NewLeafSellPrices\\NewLeaf.Services\\NewLeaf.Services.csproj": {
-              "projectPath": "C:\\Users\\dfernandez\\Source\\Repos\\NewLeafSellPrices\\NewLeaf.Services\\NewLeaf.Services.csproj"
+            "D:\\Repositories\\NewLeafSellPrices\\NewLeaf.Services\\NewLeaf.Services.csproj": {
+              "projectPath": "D:\\Repositories\\NewLeafSellPrices\\NewLeaf.Services\\NewLeaf.Services.csproj"
             }
           }
         }
@@ -5542,6 +5592,10 @@
           "Microsoft.Azure.Storage.Common": {
             "target": "Package",
             "version": "[11.1.5, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[3.1.4, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
