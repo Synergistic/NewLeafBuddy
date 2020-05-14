@@ -28,13 +28,15 @@ const TurnipPrices = props => {
     }
 
     const updateTurnipPrices = () => {
+        setEditingType(-1);
+        setEditingPrice(-1);
+
         let allPrices = [];
         morningPrices.forEach((mp, i) => {
             allPrices.push(mp);
             allPrices.push(afternoonPrices[i]);
         })
         let turnipPricesString = allPrices.join(".");
-        debugger;
         fetch(`https://acnlapi.azurewebsites.net/api/town/updateTurnips?userName=${town.ownerUsername}&townName=${town.name}&turnipPrices=${turnipPricesString}`)
             .then(response => response.json())
             .then((data) => {
@@ -109,13 +111,7 @@ const TurnipPrices = props => {
             <Table.Footer >
       <Table.Row>
         <Table.HeaderCell>
-          <Button
-            primary
-            size='large'
-            onClick={updateTurnipPrices}
-          >
-            Save
-          </Button>
+
         </Table.HeaderCell>
       </Table.Row>
     </Table.Footer>
